@@ -67,19 +67,19 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
         "shares": [
             {
                 *share*,
-                *{sharePicUrls}*
+                *{sharePics}*
             },
             {
                 *share*,
-                *{sharePicUrls}*
+                *{sharePics}*
             },
             {
                 *share*,
-                *{sharePicUrls}*
+                *{sharePics}*
             },
             {
                 *share*,
-                *{sharePicUrls}*
+                *{sharePics}*
             }
         ],
         "status": "200000551",

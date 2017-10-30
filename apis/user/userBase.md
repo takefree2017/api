@@ -11,7 +11,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user
 |---------|:------:|------:|------------:|
 |nick_name|String|昵称|是|
 |real_name|String|真实姓名|否|
-|mobile|String|手机号|否|
+|mobile|String|手机号|是|
 |email|String|邮箱|是|
 |endorser_id|Number|推荐人id|是|
 |password|String|登录密码|是|
