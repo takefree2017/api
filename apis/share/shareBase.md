@@ -1,5 +1,4 @@
-***
-#创建分享草稿
+#分享-创建分享草稿
 ## 1. 业务描述：
 用户创建分享，填写标题、描述，选择分享所属类目，上传分享的图片等
 
@@ -21,7 +20,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
 |pics|IoStream|文字地址|否|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -29,7 +29,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #更新分享草稿
@@ -53,7 +54,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/draft
 |pics|IoStream|图片，一个分享可以上传多张|否|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -61,7 +63,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/draft
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #更新分享
@@ -85,7 +88,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/
 |pics|IoStream|图片，一个分享可以上传多张|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -93,7 +97,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #查看详情
@@ -108,16 +113,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}
 无
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
         *{share}*,
-        *{sharePicUrls}*
+        *{sharePics}*
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #查看一个分享的所有图片
@@ -125,21 +132,25 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}
 查看一个分享的所有图片
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/pics
+url地址：https://dev-apis.qianbao.com/takefree/v1/sharePic
 请求方式：*GET*
 
 ## 3. 输入参数：
-无
+|字段名|属性|描述|是否必填|
+|---------|:------:|------:|------------:|
+|shareId|Mumber|分享ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
         "shareId": 000001,
-        *{sharePicUrls}*
+        *{sharePics}*
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***

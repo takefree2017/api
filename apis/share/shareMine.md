@@ -1,5 +1,4 @@
-***
-#用户的正在分享
+#用户正在的分享
 ## 1. 业务描述：
 查看用户正在进行的分享，支持分页
 
@@ -15,7 +14,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/underway
 |userId|Mumber|用户ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -38,7 +38,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/underway
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #用户查看草稿状态的分享
@@ -57,7 +58,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
 |userId|Mumber|用户ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -83,7 +85,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
         "status": "200000551",
         "info": "操作成功"
     }
-}`
+}
+```
 ***
 
 #用户的历史分享
@@ -102,7 +105,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/freed
 |userId|Mumber|用户ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -132,7 +136,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/freed
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #用户喜欢过的分享
@@ -151,7 +156,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/likes
 |userId|Mumber|用户ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -167,7 +173,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/likes
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
 
 #用户已收到的分享
@@ -186,7 +193,8 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/received
 |userId|Mumber|用户ID|是|
 
 ## 4. 返回参数：
-`{
+```
+{
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
@@ -204,5 +212,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/received
     },
     "status": "200000551",
     "info": "操作成功"
-}`
+}
+```
 ***
