@@ -1,14 +1,15 @@
 这是数据格式的定义，在api文档里统一使用变量名的方式引用这些数据格式。
 假设定义了：
-`"myobject": {"id": 1111,"name": “123abc”}`
+ - `"myobject": {"id": 1111,"name": “123abc”}`
 文档里可以使用三种方式引用*myobject*这种数据格式：
 `*myobject*、*{myobject}*、*{myobject(anotherName)}*`
 分别表示：
-`*myobject* -> "id": 1111,"name": “123abc”`
-`*{myobject}* -> "demo": {"id": 1111,"name": “123abc”}`
-`*{myobject(anotherName)}* -> "anotherName": {"id": 1111,"name": “123abc”}`
+ - `*myobject* -> "id": 1111,"name": “123abc”`
+ - `*{myobject}* -> "demo": {"id": 1111,"name": “123abc”}`
+ - `*{myobject(anotherName)}* -> "anotherName": {"id": 1111,"name": “123abc”}`
 
 # 1. 分享/草稿
+```
 "share":{
                 "id": 1000001,
                 "title": "title",
@@ -28,6 +29,7 @@
                 "likeCountLastView": 10,
 	        "picHomepage": "http://img0.qianbao.com/4,0f20b97296"
             }
+```
 
 # 2. 分享的详情图片
 `"sharePicUrls": {
