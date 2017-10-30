@@ -41,7 +41,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/underway
 }`
 ***
 
-***
 #用户查看草稿状态的分享
 ## 1. 业务描述：
 用户查看草稿状态的分享，支持分页
@@ -87,7 +86,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
 }`
 ***
 
-***
 #用户的历史分享
 ## 1. 业务描述：
 用户查看的历史分享记录，支持分页
@@ -137,7 +135,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/freed
 }`
 ***
 
-***
 #用户喜欢过的分享
 ## 1. 业务描述：
 查看用户like过的分享记录，分享下架与否都列出来，在返回结果里标注分享当前状态，已申请的过滤掉，支持分页
@@ -173,7 +170,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/likes
 }`
 ***
 
-***
 #用户已收到的分享
 ## 1. 业务描述：
 用户查看自己的历史分享记录，支持分页

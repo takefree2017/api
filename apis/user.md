@@ -31,7 +31,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user
 }`
 ***
 
-***
 #更新
 ## 1. 业务描述：
 修改用户信息
@@ -63,7 +62,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}
 }`
 ***
 
-***
 #查看用户详情
 ## 1. 业务描述：
 查看用户信息

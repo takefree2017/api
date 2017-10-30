@@ -32,7 +32,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
 }`
 ***
 
-***
 #更新分享草稿
 ## 1. 业务描述：
 修改分享内容，发布分享内容
@@ -65,7 +64,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/draft
 }`
 ***
 
-***
 #更新分享
 ## 1. 业务描述：
 发布分享、修改分享内容
@@ -98,7 +96,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/
 }`
 ***
 
-***
 #查看详情
 ## 1. 业务描述：
 查看分享信息，分享的主要信息都返回，但分享涉及的图片只返回首页url，如果想获取所有url，请使用“查看一个分享的所有图片”接口
@@ -123,7 +120,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}
 }`
 ***
 
-***
 #查看一个分享的所有图片
 ## 1. 业务描述：
 查看一个分享的所有图片
