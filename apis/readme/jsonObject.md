@@ -16,7 +16,17 @@
                 "title": "title",
                 "ownerId": 100001,
                 "shareDescPreview": "description preview",
-                "categoryIds": "11,22,33",
+                "categories": [
+                    {
+                        "categoryId": 10001
+                    },
+                    {
+                        "categoryId": 10002
+                    },
+                    {
+                        "categoryId": 10003
+                    }
+                ]
                 "status": "10",
                 "longitude": "10",
                 "latitude": "10",

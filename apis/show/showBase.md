@@ -22,7 +22,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/show
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
-        "show_id": 1000001
+        "showId": 1000001
     },
     "status": "200000551",
     "info": "操作成功"

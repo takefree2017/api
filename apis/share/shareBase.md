@@ -1,4 +1,4 @@
-#分享-创建分享草稿
+#创建分享草稿
 ## 1. 业务描述：
 用户创建分享，填写标题、描述，选择分享所属类目，上传分享的图片等
 
@@ -25,7 +25,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/draft
     "timestamp": 1504077543058,
     "message": "操作成功",
     "result": {
-        "share_id": 1000001
+        "shareId": 1000001
     },
     "status": "200000551",
     "info": "操作成功"
@@ -42,8 +42,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/draft
 请求方式：*PUT*
 
 ## 3. 输入参数：
-*PUT* 时需要输入更新的参数
-
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |title|String|分享的标题|否|
@@ -76,8 +74,6 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}/
 请求方式：*PUT*
 
 ## 3. 输入参数：
-*PUT* 时需要输入更新的参数
-
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |title|String|分享的标题|是|
@@ -148,6 +144,31 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/sharePic
     "result": {
         "shareId": 000001,
         *{sharePics}*
+    },
+    "status": "200000551",
+    "info": "操作成功"
+}
+```
+***
+
+#删除分享（包括草稿状态的分享）
+## 1. 业务描述：
+删除分享，后台逻辑删除，草稿和发布中状态的分享可以被逻辑删除
+
+## 2. 调用方式：
+url地址：https://dev-apis.qianbao.com/takefree/v1/share/{{id}}
+请求方式：*DELETE*
+
+## 3. 输入参数：
+无
+
+## 4. 返回参数：
+```
+{
+    "timestamp": 1504077543058,
+    "message": "操作成功",
+    "result": {
+        "shareId": 1000001
     },
     "status": "200000551",
     "info": "操作成功"
