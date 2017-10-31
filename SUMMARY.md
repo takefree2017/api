@@ -3,7 +3,7 @@
 * [简介](README.md)
 * [规范](specification.md)
 * [apis](apis.md)
-  * [0.]readme(apis/readme.md)
+  * [0.readme](apis/readme.md)
     * [a.约定](apis/readme/agreement.md)
     * [b.数据格式定义](apis/readme/jsonObject.md)
   * [1.用户](apis/user.md)
