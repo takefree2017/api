@@ -1,1 +1,0 @@
-- 每次API调用时，在header里加上userId，如果未登录用户访问不需要登录的API，则可以不在hearer里加userId。

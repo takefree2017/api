@@ -93,3 +93,39 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/addresses
 }
 ```
 ***
+
+#查看地区分区字典
+## 1. 业务描述：
+查看地区分区字典，暂不支持分页
+
+## 2. 调用方式：
+url地址：https://dev-apis.qianbao.com/takefree/v1/region
+请求方式：*GET*
+
+## 3. 输入参数：
+|字段名|属性|描述|是否必填|
+|---------|:------:|------:|------------:|
+|layer|Number|层级：10-第一层; 20-第二层|是|
+|regionId|Number|区域ID|layer=20时必填；layer=10时不必填|
+
+## 4. 返回参数：
+```
+{
+    "timestamp": 1504077543058,
+    "message": "操作成功",
+    "result": {
+        "userId": 1000001,
+        "addresses": [
+            {
+                *region*
+            },
+            {
+                *region*
+            }
+        ]
+    },
+    "status": "200000551",
+    "info": "操作成功"
+}
+```
+***

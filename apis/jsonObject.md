@@ -199,3 +199,12 @@
                 "content": "content2"
             }
 ```
+# 12. 地址区域
+```
+"region": {
+                "id": 10001,
+                "regionName": "region_name",
+                "layer": 10,
+                "parentRegionId": 100001
+            }
+```
