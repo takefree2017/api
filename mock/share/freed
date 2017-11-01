@@ -1,0 +1,211 @@
+{
+    "timestamp": 1504077543058,
+    "message": "操作成功",
+    "result": {
+        "userId": 1000001,
+        "shares": [
+            {
+                "id": 1000001,
+                "title": "title",
+                "ownerId": 100001,
+                "shareDescPreview": "description preview",
+                "categories": [
+                    {
+                        "categoryId": 10001
+                    },
+                    {
+                        "categoryId": 10002
+                    },
+                    {
+                        "categoryId": 10003
+                    }
+                ]
+                "status": "10",
+                "longitude": "10",
+                "latitude": "10",
+                "viewCount": 10,
+                "viewCountLastView": 10,
+                "commentCount": 10,
+                "commentCountLastView": 10,
+                "applyCount": 10,
+                "applyCountLastView": 10,
+                "likeCount": 10,
+                "likeCountLastView": 10,
+				        "picHomepage": "http://img0.qianbao.com/4,0f20b97296",
+                "applicant": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "takeOrder": {
+                    "id": 100001,
+                    "shareId": 100001,
+                    "ownerId": 100001,
+                    "applicantId": 100001,
+                    "applicationId": 100001,
+                    "takeTime": 1504077543058,
+                    "takeType": 10,
+                    "addressId": 100001,
+                    "orderStatus": 60
+                }
+            },
+            {
+                "id": 1000001,
+                "title": "title",
+                "ownerId": 100001,
+                "shareDescPreview": "description preview",
+                "categories": [
+                    {
+                        "categoryId": 10001
+                    },
+                    {
+                        "categoryId": 10002
+                    },
+                    {
+                        "categoryId": 10003
+                    }
+                ]
+                "status": "10",
+                "longitude": "10",
+                "latitude": "10",
+                "viewCount": 10,
+                "viewCountLastView": 10,
+                "commentCount": 10,
+                "commentCountLastView": 10,
+                "applyCount": 10,
+                "applyCountLastView": 10,
+                "likeCount": 10,
+                "likeCountLastView": 10,
+				        "picHomepage": "http://img0.qianbao.com/4,0f20b97296",
+                "applicant": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "takeOrder": {
+                    "id": 100001,
+                    "shareId": 100001,
+                    "ownerId": 100001,
+                    "applicantId": 100001,
+                    "applicationId": 100001,
+                    "takeTime": 1504077543058,
+                    "takeType": 10,
+                    "addressId": 100001,
+                    "orderStatus": 60
+                }
+            },
+            {
+                "id": 1000001,
+                "title": "title",
+                "ownerId": 100001,
+                "shareDescPreview": "description preview",
+                "categories": [
+                    {
+                        "categoryId": 10001
+                    },
+                    {
+                        "categoryId": 10002
+                    },
+                    {
+                        "categoryId": 10003
+                    }
+                ]
+                "status": "10",
+                "longitude": "10",
+                "latitude": "10",
+                "viewCount": 10,
+                "viewCountLastView": 10,
+                "commentCount": 10,
+                "commentCountLastView": 10,
+                "applyCount": 10,
+                "applyCountLastView": 10,
+                "likeCount": 10,
+                "likeCountLastView": 10,
+				        "picHomepage": "http://img0.qianbao.com/4,0f20b97296",
+                "applicant": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "takeOrder": {
+                    "id": 100001,
+                    "shareId": 100001,
+                    "ownerId": 100001,
+                    "applicantId": 100001,
+                    "applicationId": 100001,
+                    "takeTime": 1504077543058,
+                    "takeType": 10,
+                    "addressId": 100001,
+                    "orderStatus": 60
+                }
+            },
+            {
+                "id": 1000001,
+                "title": "title",
+                "ownerId": 100001,
+                "shareDescPreview": "description preview",
+                "categories": [
+                    {
+                        "categoryId": 10001
+                    },
+                    {
+                        "categoryId": 10002
+                    },
+                    {
+                        "categoryId": 10003
+                    }
+                ]
+                "status": "10",
+                "longitude": "10",
+                "latitude": "10",
+                "viewCount": 10,
+                "viewCountLastView": 10,
+                "commentCount": 10,
+                "commentCountLastView": 10,
+                "applyCount": 10,
+                "applyCountLastView": 10,
+                "likeCount": 10,
+                "likeCountLastView": 10,
+				        "picHomepage": "http://img0.qianbao.com/4,0f20b97296",
+                "applicant": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "takeOrder": {
+                    "id": 100001,
+                    "shareId": 100001,
+                    "ownerId": 100001,
+                    "applicantId": 100001,
+                    "applicationId": 100001,
+                    "takeTime": 1504077543058,
+                    "takeType": 10,
+                    "addressId": 100001,
+                    "orderStatus": 60
+                }
+            }
+        ]
+    },
+    "status": "200000551",
+    "info": "操作成功"
+}
