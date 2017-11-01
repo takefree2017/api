@@ -1,0 +1,51 @@
+{
+    "timestamp": 1504077543058,
+    "message": "操作成功",
+    "result": {
+        "userId": 1000001,
+        "followers": [
+            {
+                "user": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "address": {
+                    "id": 10001,
+                    "province": "province",
+                    "city": "city",
+                    "address": "address",
+                    "default": 0
+                },
+                "isFollowee": 1
+            },
+            {
+                "user": {
+                    "id": 1111,
+                    "nickName": “nick_name”,
+                    "realName": “real_name”,
+                    "mobile": "18800000000",
+                    "email": “email@163.com”,
+                    "password": “********”,
+                    "description": “111111111111”,
+                    "icon": "http://img0.qianbao.com/4,0f20b97296"
+                },
+                "address": {
+                    "id": 10001,
+                    "province": "province",
+                    "city": "city",
+                    "address": "address",
+                    "default": 0
+                },
+                "isFollowee": 0
+            }
+        ]
+    },
+    "status": "200000551",
+    "info": "操作成功"
+}
