@@ -1,6 +1,6 @@
-#填写物流单
+#填写物流单（1）
 ## 1. 业务描述：
-分享者从申请人列表里选择一个用户，做分享送出操作
+赠与人交易达成后，给订单补增物流单号
 
 ## 2. 调用方式：
 url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
@@ -12,6 +12,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
 |orderId|Number|订单ID|是|
 |logisticsNumber|String|物流单号|是|
 |status|Number|物流状态, 10送货中; 20妥投|否|
+从token里取userId，判断当前用户是否是赠与人
 
 ## 4. 返回参数：
 ```
@@ -27,7 +28,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
 ```
 ***
 
-#更新物流单
+#更新物流单（1）
 ## 1. 业务描述：
 物流状态更新
 
@@ -39,6 +40,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |status|Number|物流状态, 10送货中; 20妥投|否|
+从token里取userId，受赠人和后台物流匹配任务可以操作
 
 ## 4. 返回参数：
 ```

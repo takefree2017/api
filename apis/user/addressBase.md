@@ -1,4 +1,4 @@
-#新增
+#新增（1）
 ## 1. 业务描述：
 新增地址，用户ID、省份ID、城市ID、详细地址
 
@@ -9,11 +9,11 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address
 ## 3. 输入参数：
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
-|user_id|Number|用户ID|是|
 |province_id|Number|省份ID|是|
 |city_id|Number|城市ID|是|
 |address|String|详细地址|是|
 |zip_code|String|邮编|否|
+从token里取userId
 
 # 4. 返回参数：
 ```
@@ -29,7 +29,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address
 ```
 ***
 
-#更新
+#更新（1）
 ## 1. 业务描述：
 修改地址信息
 
@@ -40,10 +40,10 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address/{{id}}
 ## 3. 输入参数：
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
-|user_id|Number|用户ID|是|
 |province_id|Number|省份ID|是|
 |city_id|Number|城市ID|是|
 |address|String|详细地址|是|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -59,18 +59,16 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address/{{id}}
 ```
 ***
 
-#查看用户的所有收货地址
+#查看用户的所有收货地址（1）
 ## 1. 业务描述：
 查看一个用户的所有地址，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/addresses
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/addresses
 请求方式：*GET*
 
 ## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|userId|Mumber|用户ID|是|
+无，从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -94,12 +92,12 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/addresses
 ```
 ***
 
-#查看地区分区字典
+#查看地区分区字典（0）
 ## 1. 业务描述：
 查看地区分区字典，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/region
+url地址：https://dev-apis.qianbao.com/takefree/v1/regions
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -115,7 +113,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/region
     "message": "操作成功",
     "result": {
         "userId": 1000001,
-        "addresses": [
+        "regions": [
             {
                 *region*
             },

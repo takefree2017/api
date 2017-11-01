@@ -1,15 +1,16 @@
-#新增关注人
+#新增关注人（1）
 ## 1. 业务描述：
 用户查看别人profile后觉得喜欢，新增关注人
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/like
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
 请求方式：*POST*
 
 ## 3. 输入参数：
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |followeeId|Mumber|被关注人ID|是|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -25,18 +26,19 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/like
 ```
 ***
 
-#取消关注人
+#取消关注人（1）
 ## 1. 业务描述：
 用户取消曾经关注的人
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/like
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
 请求方式：*DELETE*
 
 ## 3. 输入参数：
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |followeeId|Mumber|被关注人ID|是|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -52,12 +54,12 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/like
 ```
 ***
 
-#我关注谁
+#我关注谁（1）
 ## 1. 业务描述：
 用户查看自己关注的好友，支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followees
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/followees
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -65,6 +67,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followees
 |---------|:------:|------:|------------:|
 |pageNo|Mumber|当前页码|是|
 |pageSize|Mumber|每页尺寸|是|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -75,13 +78,13 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followees
         "userId": 1000001,
         "followees": [
             {
-                *user*,
-                *address*,
+                *{user}*,
+                *{address}*,
                 "isFollower": 1
             },
             {
-                *user*,
-                *address*,
+                *{user}*,
+                *{address}*,
                 "isFollower": 0
             }
         ]
@@ -92,12 +95,12 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followees
 ```
 ***
 
-#谁关注我
+#谁关注我（1）
 ## 1. 业务描述：
 用户查看关注自己的好友，支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followers
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/followers
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -105,6 +108,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followers
 |---------|:------:|------:|------------:|
 |pageNo|Mumber|当前页码|是|
 |pageSize|Mumber|每页尺寸|是|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -115,13 +119,13 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}/followers
         "userId": 1000001,
         "followers": [
             {
-                *user*,
-                *address*,
+                *{user}*,
+                *{address}*,
                 "isFollowee": 1
             },
             {
-                *user*,
-                *address*,
+                *{user}*,
+                *{address}*,
                 "isFollowee": 0
             }
         ]

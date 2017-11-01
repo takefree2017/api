@@ -11,7 +11,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user
 |---------|:------:|------:|------------:|
 |nick_name|String|昵称|是|
 |real_name|String|真实姓名|否|
-|mobile|String|手机号|是|
+|mobile|String|手机号|否|
 |email|String|邮箱|是|
 |endorser_id|Number|推荐人id|是|
 |password|String|登录密码|是|
@@ -32,12 +32,12 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user
 ```
 ***
 
-#更新
+#更新用户信息（1）
 ## 1. 业务描述：
 修改用户信息
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}
+url地址：https://dev-apis.qianbao.com/takefree/v1/user
 请求方式：*PUT* - 修改
 
 ## 3. 输入参数：
@@ -50,6 +50,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}
 |password|String|登录密码|否|
 |icon|IoStream|用户头像|否|
 |description|String|用户简介|否|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -65,16 +66,41 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}
 ```
 ***
 
-#查看用户详情
+#查看用户详情（1）
 ## 1. 业务描述：
 查看用户信息
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/{{id}}
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/private
 请求方式：*GET*
 
 ## 3. 输入参数：
-无
+无，从token里取userId
+
+## 4. 返回参数：
+```
+{
+    "timestamp": 1504077543058,
+    "message": "操作成功",
+    "result": {
+        *user*
+    },
+    "status": "200000551",
+    "info": "操作成功"
+}
+```
+***
+
+#查看用户详情（0）
+## 1. 业务描述：
+查看用户信息
+
+## 2. 调用方式：
+url地址：https://dev-apis.qianbao.com/takefree/v1/user/public/{{id}}
+请求方式：*GET*
+
+## 3. 输入参数：
+无，从uri里取userId
 
 ## 4. 返回参数：
 ```

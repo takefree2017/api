@@ -1,4 +1,4 @@
-#用户关注类目
+#用户关注类目（1）
 ## 1. 业务描述：
 用户设置个人喜好，新增关注类目
 
@@ -7,7 +7,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/category/{{id}}/like
 请求方式：*POST*
 
 ## 3. 输入参数：
-无，用户ID从token取
+无，从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -23,7 +23,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/category/{{id}}/like
 ```
 ***
 
-#用户关注类目
+#用户关注类目（1）
 ## 1. 业务描述：
 用户设置个人喜好，新增关注类目
 
@@ -32,7 +32,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/category/{{id}}/like
 请求方式：*DELETE*
 
 ## 3. 输入参数：
-无，用户ID从token取
+无，从token里取userId
 
 ## 4. 返回参数：
 ```

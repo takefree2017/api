@@ -1,4 +1,4 @@
-#创建订单
+#创建订单（1）
 ## 1. 业务描述：
 分享者从申请人列表里选择一个用户，做分享送出操作
 
@@ -9,11 +9,11 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder
 ## 3. 输入参数：
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
-|shareId|Mumber|分享ID|是|
 |applicantId|Mumber|申请人ID|是|
 |applicationId|Mumber|申请单ID|是|
 |addressId|Mumber|送货地址ID|否|
 |takeType|Mumber|交易类型：10邮寄到付; 20见面交易|否|
+从token里取userId
 
 ## 4. 返回参数：
 ```
@@ -29,9 +29,9 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder
 ```
 ***
 
-#更新订单
+#更新订单（1）
 ## 1. 业务描述：
-更新订单状态，例如已评价、已显摆等
+更新订单状态，例如已评价、已显摆等，赠与人和受赠人才能操作，操作时需要做状态检查，使其符合订单的状态流转顺序，不同角色可操作的状态有区别
 
 ## 2. 调用方式：
 url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder/{{id}}
@@ -41,6 +41,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder/{{id}}
 |字段名|属性|描述|是否必填|
 |---------|:------:|------:|------------:|
 |status|Number|20发布者已填运单号; 30申请人已评价; 40申请人已显摆; 40已评价并已显摆|否|
+从token里取userId，根据操作状态判断当前用户是赠与人还是受赠人，然后比对
 
 ## 4. 返回参数：
 ```

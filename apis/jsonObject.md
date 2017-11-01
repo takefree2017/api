@@ -38,7 +38,7 @@
                 "applyCountLastView": 10,
                 "likeCount": 10,
                 "likeCountLastView": 10,
-	        "picHomepage": "http://img0.qianbao.com/4,0f20b97296"
+				"picHomepage": "http://img0.qianbao.com/4,0f20b97296"
             }
 ```
 # 2. 分享的详情图片
@@ -150,7 +150,7 @@
                 "takeTime": 1504077543058,
                 "takeType": 10,
                 "addressId": 100001,
-                "orderStatus": 60,
+                "orderStatus": 60
             }
 ```
 
