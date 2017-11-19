@@ -51,14 +51,18 @@
 ```
 ### 1 创建分享草稿（需要登录）
 * 1 业务描述
-用户创建分享，填写标题、描述，选择分享所属类目，上传分享的图片等
+
+    用户创建分享，填写标题、描述，选择分享所属类目，上传分享的图片等
 
 * 2 调用方式
-url地址：https://{domain}/takefree/v1/share
-请求方式：*POST*
+
+    url地址：https://{domain}/takefree/v1/share
+
+    请求方式：*POST*
 
 * 3 输入参数
-无
+    
+    无
 
 * 4 请求消息体
     ```json
@@ -112,14 +116,18 @@ url地址：https://{domain}/takefree/v1/share
 ***
 ### 2 更新分享（需要登录）
 * 1 业务描述
-修改草稿和已发布分享
+    
+    修改草稿和已发布分享
 
 * 2 调用方式
-url地址：https://{domain}/takefree/v1/share/{id}
-请求方式：*PUT*
+    
+    url地址：https://{domain}/takefree/v1/share/{id}
+    
+    请求方式：*PUT*
 
 * 3 输入参数
-无
+    
+    无
 
 * 4 请求消息体
     ```json
