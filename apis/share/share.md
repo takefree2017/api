@@ -335,7 +335,7 @@
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
-        result: [{shareDTO}...]
+        "result": [{shareDTO}...]
     }
     ```
 
@@ -372,7 +372,7 @@
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
-        result: [{shareDTO}...]
+        "result": [{shareDTO}...]
     }
     ```
 ***
@@ -408,7 +408,7 @@
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
-        result: [{shareDTO}...]
+        "result": [{shareDTO}...]
     }
     ```
 ### 9 用户收到的分享列表（需要登录）
@@ -441,6 +441,6 @@
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
-        result: [{shareDTO}...]
+        "result": [{shareDTO}...]
     }
     ```
