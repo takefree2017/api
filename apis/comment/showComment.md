@@ -1,9 +1,9 @@
-#对显摆发布评论（1）
+#对显摆发布评论（需要登录）
 ## 1. 业务描述：
 用户对显摆发布评论
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/showComment
+url地址：https://{domain}/takefree/v1/showComment
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -22,18 +22,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/showComment
     "result": {
         "commentId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#用户删除自己关于显摆的某次评论（1）
+#用户删除自己关于显摆的某次评论（需要登录）
 ## 1. 业务描述：
 用户删除自己关于显摆的某次评论
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/showComment/{{id}}
+url地址：https://{domain}/takefree/v1/showComment/{{id}}
 请求方式：*DELETE*
 
 ## 3. 输入参数：
@@ -47,18 +47,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/showComment/{{id}}
     "result": {
         "commentId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#查看显摆的评论（0）
+#查看显摆的评论
 ## 1. 业务描述：
 查看显摆的评论，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/showComment
+url地址：https://{domain}/takefree/v1/showComment
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -82,7 +82,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/showComment
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

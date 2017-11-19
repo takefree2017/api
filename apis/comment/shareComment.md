@@ -1,9 +1,9 @@
-#对分享发布评论（1）
+#对分享发布评论（需要登录）
 ## 1. 业务描述：
 用户对“发布中”状态的分享发布评论
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment
+url地址：https://{domain}/takefree/v1/shareComment
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -22,18 +22,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment
     "result": {
         "commentId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#用户删除自己关于分享的某次评论（1）
+#用户删除自己关于分享的某次评论（需要登录）
 ## 1. 业务描述：
 用户删除自己关于分享的某次评论
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment/{{id}}
+url地址：https://{domain}/takefree/v1/shareComment/{{id}}
 请求方式：*DELETE*
 
 ## 3. 输入参数：
@@ -47,18 +47,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment/{{id}}
     "result": {
         "commentId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#查看分享的评论（0）
+#查看分享的评论
 ## 1. 业务描述：
 查看分享的评论，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment
+url地址：https://{domain}/takefree/v1/shareComment
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -81,7 +81,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/shareComment
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

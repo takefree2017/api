@@ -84,7 +84,7 @@
 ```
 # 3. 用户
 ```
-"user": {
+"userDTO": {
         "id": 1111,
         "nickName": “nick_name”,
         "realName": “real_name”,

@@ -1,9 +1,9 @@
-#创建订单（1）
+#创建订单（需要登录）
 ## 1. 业务描述：
 分享者从申请人列表里选择一个用户，做分享送出操作
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder
+url地址：https://{domain}/takefree/v1/takeorder
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -23,18 +23,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder
     "result": {
         "takeOrderId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#更新订单（1）
+#更新订单（需要登录）
 ## 1. 业务描述：
 更新订单状态，例如已评价、已显摆等，赠与人和受赠人才能操作，操作时需要做状态检查，使其符合订单的状态流转顺序，不同角色可操作的状态有区别
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder/{{id}}
+url地址：https://{domain}/takefree/v1/takeorder/{{id}}
 请求方式：*PUT*
 
 ## 3. 输入参数：
@@ -51,7 +51,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/takeorder/{{id}}
     "result": {
         "takeOrderId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

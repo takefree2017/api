@@ -1,9 +1,9 @@
-#新增关注人（1）
+#新增关注人（需要登录）
 ## 1. 业务描述：
 用户查看别人profile后觉得喜欢，新增关注人
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
+url地址：https://{domain}/takefree/v1/userDTO/like
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -20,18 +20,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
     "result": {
         "followeeId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#取消关注人（1）
+#取消关注人（需要登录）
 ## 1. 业务描述：
 用户取消曾经关注的人
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
+url地址：https://{domain}/takefree/v1/userDTO/like
 请求方式：*DELETE*
 
 ## 3. 输入参数：
@@ -48,18 +48,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/like
     "result": {
         "followeeId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#我关注谁（1）
+#我关注谁（需要登录）
 ## 1. 业务描述：
 用户查看自己关注的好友，支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/followees
+url地址：https://{domain}/takefree/v1/userDTO/followees
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -78,29 +78,29 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/followees
         "userId": 1000001,
         "followees": [
             {
-                *{user}*,
+                *{userDTO}*,
                 *{address}*,
                 "isFollower": 1
             },
             {
-                *{user}*,
+                *{userDTO}*,
                 *{address}*,
                 "isFollower": 0
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#谁关注我（1）
+#谁关注我（需要登录）
 ## 1. 业务描述：
 用户查看关注自己的好友，支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/followers
+url地址：https://{domain}/takefree/v1/userDTO/followers
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -119,18 +119,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/followers
         "userId": 1000001,
         "followers": [
             {
-                *{user}*,
+                *{userDTO}*,
                 *{address}*,
                 "isFollowee": 1
             },
             {
-                *{user}*,
+                *{userDTO}*,
                 *{address}*,
                 "isFollowee": 0
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

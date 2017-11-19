@@ -1,9 +1,9 @@
-#创建（1）
+#创建（需要登录）
 ## 1. 业务描述：
 用户对已经收到的分享显摆一下，上传物品图片、描述、选择一个心情图标
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/show
+url地址：https://{domain}/takefree/v1/show
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -24,18 +24,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/show
     "result": {
         "show_id": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#查看（0）
+#查看
 ## 1. 业务描述：
 查看显摆信息，但不包括显摆的评论
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/show/{{id}}
+url地址：https://{domain}/takefree/v1/show/{{id}}
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -49,7 +49,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/show/{{id}}
     "result": {
         *show*
     }
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

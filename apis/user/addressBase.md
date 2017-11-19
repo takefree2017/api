@@ -1,9 +1,9 @@
-#新增（1）
+#新增（需要登录）
 ## 1. 业务描述：
 新增地址，用户ID、省份ID、城市ID、详细地址
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/address
+url地址：https://{domain}/takefree/v1/address
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -23,18 +23,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address
     "result": {
         "addressId":1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#更新（1）
+#更新（需要登录）
 ## 1. 业务描述：
 修改地址信息
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/address/{{id}}
+url地址：https://{domain}/takefree/v1/address/{{id}}
 请求方式：*PUT*
 
 ## 3. 输入参数：
@@ -53,18 +53,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/address/{{id}}
     "result": {
         "addressId": 100000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#查看用户的所有收货地址（1）
+#查看用户的所有收货地址（需要登录）
 ## 1. 业务描述：
 查看一个用户的所有地址，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/user/addresses
+url地址：https://{domain}/takefree/v1/userDTO/addresses
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -86,18 +86,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/user/addresses
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#查看地区分区字典（0）
+#查看地区分区字典
 ## 1. 业务描述：
 查看地区分区字典，暂不支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/regions
+url地址：https://{domain}/takefree/v1/regions
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -122,7 +122,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/regions
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

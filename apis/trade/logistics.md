@@ -1,9 +1,9 @@
-#填写物流单（1）
+#填写物流单（需要登录）
 ## 1. 业务描述：
 赠与人交易达成后，给订单补增物流单号
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
+url地址：https://{domain}/takefree/v1/logistics
 请求方式：*POST*
 
 ## 3. 输入参数：
@@ -22,18 +22,18 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
     "result": {
         "logisticsId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
 ***
 
-#更新物流单（1）
+#更新物流单（需要登录）
 ## 1. 业务描述：
 物流状态更新
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
+url地址：https://{domain}/takefree/v1/logistics
 请求方式：*PUT*
 
 ## 3. 输入参数：
@@ -50,7 +50,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/logistics
     "result": {
         "logisticsId": 1000001
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```

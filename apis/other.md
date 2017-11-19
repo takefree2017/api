@@ -1,9 +1,9 @@
-#首页list接口（0）
+#首页list接口
 ## 1. 业务描述：
 首页上按时间排序所有正在进行的分享和显摆，支持分页
 
 ## 2. 调用方式：
-url地址：https://dev-apis.qianbao.com/takefree/v1/pageview
+url地址：https://{domain}/takefree/v1/pageview
 请求方式：*GET*
 
 ## 3. 输入参数：
@@ -38,7 +38,7 @@ url地址：https://dev-apis.qianbao.com/takefree/v1/pageview
             }
         ]
     },
-    "status": "200000551",
+    "status": "20000000",
     "info": "操作成功"
 }
 ```
