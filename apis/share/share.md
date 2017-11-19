@@ -242,17 +242,22 @@
 ***
 ### 4 删除分享（需要登录）
 * 1 业务描述
-删除分享，后台逻辑删除，草稿和发布中状态的分享可以被逻辑删除，分享主人才能操作
+
+    删除分享，后台逻辑删除，草稿和发布中状态的分享可以被逻辑删除，分享主人才能操作
 
 * 2 调用方式
-url地址：https://{domain}/takefree/v1/share/{id}
-请求方式：*DELETE*
+
+    url地址：https://{domain}/takefree/v1/share/{id}
+    
+    请求方式：*DELETE*
 
 * 3 输入参数
-无
+
+    无
 
 * 4 请求消息体
-无
+
+    无
 
 * 5 返回消息体
     ```
@@ -308,10 +313,15 @@ url地址：https://{domain}/takefree/v1/share/{id}
 * 3 输入参数
     
     status:状态,可选
+    
     ownerId:发布人,可选
+    
     maxId:可选，最大id(不包含)，用于分页
+    
     pageSize:可选，分页数量
+    
     pageNo:可选，分页号
+    
     注意:maxId与pageNo二选一
     
 * 4 请求消息体
@@ -344,8 +354,11 @@ url地址：https://{domain}/takefree/v1/share/{id}
 * 3 输入参数
     
     status:分享状态,可选
+    
     ownerId:发布人,可选
+    
     pageSize:可选，分页数量
+    
     pageNo:可选，分页号
     
 * 4 请求消息体
@@ -377,8 +390,11 @@ url地址：https://{domain}/takefree/v1/share/{id}
 * 3 输入参数
     
     status:分享状态,可选
+    
     ownerId:发布人,可选
+    
     pageSize:可选，分页数量
+    
     pageNo:可选，分页号
     
 * 4 请求消息体
@@ -409,7 +425,9 @@ url地址：https://{domain}/takefree/v1/share/{id}
 * 3 输入参数
     
     ownerId:发布人,可选
+    
     pageSize:可选，分页数量
+    
     pageNo:可选，分页号
     
 * 4 请求消息体
