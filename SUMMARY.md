@@ -5,13 +5,13 @@
 * apis
   * 用户
 	* [1.用户](apis/user/user.md)
-	* [2.用户Like](apis/user/userLike.md)
+	* [2.用户like](apis/user/userLike.md)
 	* [3.用户地址](apis/userDTO/userAddress.md)
   * 类目
   	* [1.类目](apis/category/category.md)
   * 分享
 	* [1.分享](apis/share/share.md)
-	* [1.分享Like](apis/share/shareLike.md)
+	* [2.分享like](apis/share/shareLike.md)
   * 交易
     * [1.申请](apis/trade/application.md)
 	* [2.订单](apis/trade/order.md)

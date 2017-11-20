@@ -1,115 +1,221 @@
-#创建用户
-## 1. 业务描述：
-新增用户，昵称、真实姓名、手机号、邮箱、邀请用户ID、头像、登录密码、个人简介、收货地址
-
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO
-请求方式：*POST*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|nick_name|String|昵称|是|
-|real_name|String|真实姓名|否|
-|mobile|String|手机号|是|
-|email|String|邮箱|是|
-|endorser_id|Number|推荐人id|是|
-|password|String|登录密码|是|
-|icon|IoStream|用户头像|否|
-|description|String|用户简介|否|
-
-## 4. 返回参数：
-```
+### 数据格式
+#### userDTO字段信息(@detail只在请求详情是返回;@all管理时才返回,一般不适用)
+```json
 {
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "id": 1
-    },
-    "status": "20000000",
-    "info": "操作成功"
+    "id": 14, //id
+    "nickName": "昵称", 
+    "realName": "高翔", //@detail姓名
+    "mobile": "手机号", //@detail
+    "email": "邮箱", //@detail
+    "password": "123456",//@all,密码,最短6位，最长12位
+    "endorserId": 0, //@detail推荐人id
+    "status":10,//@all,状态
+    "description":"描述",
+    "smallIcon": "/public/takefree/222222.jpg", //小图标
+    "bigIcon": "/public/takefree/222223.jpg", //大图标
+    "gmtCreate": "2017-11-13 11:36:02", //@detail创建时间
+    "lastloginTime": "2017-11-20 11:41:41" //@detail最后登录时间
 }
 ```
+### 1 新建用户(待定)
+* 1 业务描述
+
+    新建用户，手机号唯一性检查
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user
+
+    请求方式：*POST*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    ```json
+    {
+        "nickName": "goodgirl", //必须
+        "realName":"", //可选
+        "mobile":"18888888888",//必须
+        "endorserId":1, //可选
+        "password":"123456",//必须
+        "mobile": "", //可选
+        "email": "", //可选
+        "description":""
+    }
+    ```
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "result": {
+            $userDTO$
+        },
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
 ***
+### 2 登录
+* 1 业务描述
+    
+    手机号和密码登录
 
-#更新用户信息（需要登录）
-## 1. 业务描述：
-修改用户信息
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/login
+    
+    请求方式：*POST*
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO
-请求方式：*PUT* - 修改
+* 3 输入参数
+    
+    无
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|nick_name|String|昵称|否|
-|real_name|String|真实姓名|否|
-|email|String|邮箱|否|
-|icon|IoStream|用户头像|否|
-|description|String|用户简介|否|
-从token里取userId
+* 4 请求消息体
+    ```json
+    {
+        "mobile": "", //必须
+        "password":"" //必须，md5两次
+    }
+    ```
+* 5 返回参数：
+    ```
+    {
+        "status": "20000000",
+        "message": "操作成功",
+        "result": {
+            "token": "4c67ac3531cf4d07bda4a15d68bf1569",
+            "userDTO": {
+                $userDTO$
+            },
+            "loginTime": "2017-11-20 14:19:32"
+        }
+    }
+### 3 退出登录
+* 1 业务描述
+    
+    手机号和密码登录
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "user_id": 1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/logout
+    
+    请求方式：*DELETE*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+
+    无
+    
+* 5 返回参数：
+    ```
+    {
+        "timestamp": 1504077543058,
+         "message": "操作成功",
+         "status": "20000000",
+         "info": "操作成功"
+    }
 ***
+### 4 更新用户（需要登录）
+* 1 业务描述
+    
+    更新用户信息，手机号和密码不能通过本接口修改
 
-#查看用户详情（需要登录）
-## 1. 业务描述：
-查看用户信息
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/user
+    
+    请求方式：*PUT*
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/detail
-请求方式：*GET*
+* 3 输入参数
+    
+    无
 
-## 3. 输入参数：
-无，从token里取userId
-
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        *userDTO*
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 4 请求消息体
+    ```json
+    {
+        "nickName": "", //可选
+        "realName":"", //可选
+        "description":"" //可选
+    }
+    ```
+* 5 返回参数：
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功"
+    }
+    ```
 ***
+### 5 用户详细信息（需要登录）
+* 1 业务描述：
+    
+    登录用户获取详细信息。
 
-#查看用户详情
-## 1. 业务描述：
-查看用户信息
+* 2 调用方式：
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/brief/{{id}}
-请求方式：*GET*
+    url地址：https://{domain}/takefree/v1/user/detail
+    
+    请求方式：*GET*
+    
+* 3 输入参数：
+    
+    无    
 
-## 3. 输入参数：
-无，从uri里取userId
+* 4 请求消息体：
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        *userDTO*
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+    无 
+
+* 5 返回参数
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": {
+            $userDTO$
+        }
+    }
+    ```
+***
+### 6 用户基本信息
+* 1 业务描述
+
+    获取用户基本信息
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/brief/{id}
+    
+    请求方式：*GET*
+
+* 3 输入参数
+
+    无
+
+* 4 请求消息体
+
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": {
+            $userDTO$
+        }
+    }
+    ```
 ***
