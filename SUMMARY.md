@@ -5,19 +5,22 @@
 * apis
   * 用户
 	* [1.用户](apis/user/user.md)
-	* [2.用户地址](apis/userDTO/userAddress.md)
+	* [2.用户Like](apis/user/userLike.md)
+	* [3.用户地址](apis/userDTO/userAddress.md)
   * 类目
   	* [1.类目](apis/category/category.md)
   * 分享
 	* [1.分享](apis/share/share.md)
+	* [1.分享Like](apis/share/shareLike.md)
   * 交易
     * [1.申请](apis/trade/application.md)
 	* [2.订单](apis/trade/order.md)
 	* [3.物流](apis/trade/logistics.md)
   * 评论
-    * [1.分享评论](apis/comment/shareComment.md)
-	* [2.显摆评论](apis/comment/showComment.md)
+    * [1.分享评论](apis/comment/share.md)
+	* [2.显摆评论](apis/comment/show.md)
   * 显摆
-    * [1.基本操作](apis/show/showBase.md)
+    * [1.基本操作](apis/show/show.md)
   * 其他
+    * [1.首页](apis/other/index.md)
 * [接口mock](apis/mock.md)
