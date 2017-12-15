@@ -22,6 +22,7 @@
     ```json
     {
      "status":"20000000",
+     "timestamp": "2017-11-13 11:36:02",
      "message":"OK",
      "result":{"col_1":"val_1", "col_2":"val_2"},
      "info":"xxx"
@@ -31,6 +32,7 @@
     ```json
     {
      "status":"20000000",
+     "timestamp": "2017-11-13 11:36:02",
      "message":"OK",
      "result":[{"col_1":"val_1","col_2":"val_2"},{"col_1":"val_1","col_2":"val_2"}],
      "info":"xxx"

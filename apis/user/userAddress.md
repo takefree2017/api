@@ -1,129 +1,188 @@
-#新增（需要登录）
-## 1. 业务描述：
-新增地址，用户ID、省份ID、城市ID、详细地址
-
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/address
-请求方式：*POST*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|province_id|Number|省份ID|是|
-|city_id|Number|城市ID|是|
-|address|String|详细地址|是|
-|zip_code|String|邮编|否|
-从token里取userId
-
-# 4. 返回参数：
-```
+### 数据格式
+#### userAddressDTO字段信息
+```json
 {
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "addressId":1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
+    "id": 14, //id
+    "userId": "用户id", 
+    "userName": "高翔", //姓名
+    "phone": "电话号", 
+    "provinceId":100000,//"省编码", 
+    "cityId":200100, //"市编码"
+    "postcode":100100, //右边
+    "address":"地址",
+    "isDefault":1,//"默认地址",1,"非默认地址",0;
+    "gmtCreate": "2017-11-13 11:36:02", //创建时间
+    "gmtModified": "2017-11-20 11:41:41" //最后登录时间
 }
 ```
+### 1 新增地址（需要登录）
+* 1 业务描述
+
+    增加用户地址
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/address
+
+    请求方式：*POST*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    ```json
+    {
+        "userName": "高翔",
+        "phone": "电话号", 
+        "provinceId":100000,
+        "cityId":200100,
+        "postcode":100100, 
+        "address":"地址",
+        "isDefault":0
+    }
+    ```
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+            {userAddressDTO}
+        }
+    }
+    ```
+***
+### 2 删除地址（需要登录）
+* 1 业务描述
+
+    删除用户地址
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/address/{id}
+
+    请求方式：*DELETE*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
+***
+### 3 按id查询地址
+* 1 业务描述
+
+    删除用户地址
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/address/{id}
+
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+            {userAddressDTO}
+        }
+    }
+    ```
 ***
 
-#更新（需要登录）
-## 1. 业务描述：
-修改地址信息
+### 4 查询地址(需要登录)
+* 1 业务描述
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/address/{{id}}
-请求方式：*PUT*
+    删除用户地址
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|province_id|Number|省份ID|是|
-|city_id|Number|城市ID|是|
-|address|String|详细地址|是|
-从token里取userId
+* 2 调用方式
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "addressId": 100000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+    url地址：https://{domain}/takefree/v1/user/address
+
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    isDefault=1 //是否默认地址，可选
+
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+            "result": [{userAddressDTO}...]
+        }
+    }
+    ```
 ***
+### 5 修改地址（需要登录）
+* 1 业务描述
 
-#查看用户的所有收货地址（需要登录）
-## 1. 业务描述：
-查看一个用户的所有地址，暂不支持分页
+    增加用户地址
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/addresses
-请求方式：*GET*
+* 2 调用方式
 
-## 3. 输入参数：
-无，从token里取userId
+    url地址：https://{domain}/takefree/v1/user/address/{id}
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "userId": 1000001,
-        "addresses": [
-            {
-                *address*
-            },
-            {
-                *address*
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
-***
+    请求方式：*PUT*
 
-#查看地区分区字典
-## 1. 业务描述：
-查看地区分区字典，暂不支持分页
+* 3 输入参数
+    
+    无
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/regions
-请求方式：*GET*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|layer|Number|层级：10-第一层; 20-第二层|是|
-|regionId|Number|区域ID|layer=20时必填；layer=10时不必填|
-
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "userId": 1000001,
-        "regions": [
-            {
-                *region*
-            },
-            {
-                *region*
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 4 请求消息体
+    ```json
+    {
+        "userName": "高翔",
+        "phone": "电话号", 
+        "provinceId":100000,
+        "cityId":200100,
+        "postcode":100100, 
+        "address":"地址",
+        "isDefault":0
+    }
+    ```
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
 ***

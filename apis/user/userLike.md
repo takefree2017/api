@@ -1,137 +1,101 @@
-#新增关注人（需要登录）
-## 1. 业务描述：
-用户查看别人profile后觉得喜欢，新增关注人
-
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/like
-请求方式：*POST*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|followeeId|Mumber|被关注人ID|是|
-从token里取userId
-
-## 4. 返回参数：
-```
+### 数据格式
+#### userLike字段信息
+```json
 {
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "followeeId": 1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
+    "id": 14, //id
+    "userFolloweeId": 1, //被关注人id
+    "userFollowerId": 2, //关注人id
+    "gmtCreate":"2017-11-13 11:36:02" //"关注时间"
+    
 }
 ```
+### 1 关注（需要登录）
+* 1 业务描述
+
+    增加用户地址
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/userlike
+
+    请求方式：*POST*
+
+* 3 输入参数
+    
+    folleweeId //必须
+
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+            {userLike}
+        }
+    }
+    ```
 ***
+### 2 按id取消关注（需要登录）
+* 1 业务描述
 
-#取消关注人（需要登录）
-## 1. 业务描述：
-用户取消曾经关注的人
+    增加用户地址
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/like
-请求方式：*DELETE*
+* 2 调用方式
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|followeeId|Mumber|被关注人ID|是|
-从token里取userId
+    url地址：https://{domain}/takefree/v1/userlike/{id}
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "followeeId": 1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+    请求方式：*DELETE*
+
+* 3 输入参数
+
+    无
+    
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
 ***
+### 3 按被关注人取消关注（需要登录）
+* 1 业务描述
 
-#我关注谁（需要登录）
-## 1. 业务描述：
-用户查看自己关注的好友，支持分页
+    增加用户地址
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/followees
-请求方式：*GET*
+* 2 调用方式
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|pageNo|Mumber|当前页码|是|
-|pageSize|Mumber|每页尺寸|是|
-从token里取userId
+    url地址：https://{domain}/takefree/v1/userlike
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "userId": 1000001,
-        "followees": [
-            {
-                *{userDTO}*,
-                *{address}*,
-                "isFollower": 1
-            },
-            {
-                *{userDTO}*,
-                *{address}*,
-                "isFollower": 0
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
-***
+    请求方式：*DELETE*
 
-#谁关注我（需要登录）
-## 1. 业务描述：
-用户查看关注自己的好友，支持分页
+* 3 输入参数
+    
+    folleweeId //必须
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/userDTO/followers
-请求方式：*GET*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|pageNo|Mumber|当前页码|是|
-|pageSize|Mumber|每页尺寸|是|
-从token里取userId
-
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "userId": 1000001,
-        "followers": [
-            {
-                *{userDTO}*,
-                *{address}*,
-                "isFollowee": 1
-            },
-            {
-                *{userDTO}*,
-                *{address}*,
-                "isFollowee": 0
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 4 请求消息体
+    
+    无
+    
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
 ***
