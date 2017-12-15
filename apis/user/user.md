@@ -14,7 +14,8 @@
     "smallIcon": "/public/takefree/222222.jpg", //小图标
     "bigIcon": "/public/takefree/222223.jpg", //大图标
     "gmtCreate": "2017-11-13 11:36:02", //@detail创建时间
-    "lastloginTime": "2017-11-20 11:41:41" //@detail最后登录时间
+    "lastloginTime": "2017-11-20 11:41:41", //@detail最后登录时间
+    "isFollowee":false //当前用户是否like，用于当前用户查看follower
 }
 ```
 ### 1 新建用户(待定)
@@ -40,8 +41,9 @@
         "mobile":"18888888888",//必须
         "endorserId":1, //可选
         "password":"123456",//必须
-        "mobile": "", //可选
         "email": "", //可选
+        "smallIcon": "/public/takefree/222222.jpg", //可选
+        "bigIcon": "/public/takefree/222223.jpg", //可选
         "description":""
     }
     ```
@@ -142,6 +144,9 @@
     {
         "nickName": "", //可选
         "realName":"", //可选
+        "email": "", //可选
+        "smallIcon": "/public/takefree/222222.jpg", //可选
+        "bigIcon": "/public/takefree/222223.jpg", //可选
         "description":"" //可选
     }
     ```
@@ -216,6 +221,74 @@
         "result": {
             $userDTO$
         }
+    }
+    ```
+***
+### 7 获取关注本人的用户（需要登录）
+* 1 业务描述
+
+    获取关注本人的用户
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/follower
+    
+    请求方式：*GET*
+
+* 3 输入参数
+
+    pageSize:可选，分页数量
+        
+    pageNo:可选，分页号
+
+* 4 请求消息体
+
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": [
+            {$userDTO$}...
+        ]
+    }
+    ```
+***
+### 8 获取本人关注的用户（需要登录）
+* 1 业务描述
+
+    获取本人关注的用户
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/user/followee
+    
+    请求方式：*GET*
+
+* 3 输入参数
+
+    pageSize:可选，分页数量
+        
+    pageNo:可选，分页号
+
+* 4 请求消息体
+
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": 1504077543058,
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": [
+            {$userDTO$}...
+        ]
     }
     ```
 ***

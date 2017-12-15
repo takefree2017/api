@@ -6,6 +6,7 @@
     "title": "title", 
     "ownerId": 100001, //发布人Id
     "ownerNickName": "发布人昵称",
+    "ownerSmallIcon": "/public/takefree/222222.jpg", //发布人小图标
     "shareDescPreview": "描述缩略",
     "description":"描述",
     "publishTime": "2017-11-14 11:36:02",//发布时间
@@ -14,12 +15,10 @@
     "latitude": 22.22, //@detail,维度
     "lbsDescription": "地址详情",//@detail
     "viewCount": 10, //点击量
-    "commentCount": 10,//回复数量
-    "lastCommentViewTime": "2017-11-14 11:36:02",//最后查看回复时间
-    "lastCommentTime": "2017-11-13 11:36:02",//最后回复时间
+    "commentCount": 10,//评论次数
+    "newCommentCount": 5,//最新评论次数
     "applyCount": 10,//申请人数
-    "lastApplyViewTime": "2017-11-12 11:36:02", //最后查看申请时间
-    "lastApplyTime": "2017-11-13 11:36:02",//最后申请时间
+    "newApplyCount": 3,//最新申请人数
     "likeCount": 10,//like人数
 	"picHomepage": "/public/takefree/pic/1.jpg", //首页图片url
 	"categories": [//@detail,分类
