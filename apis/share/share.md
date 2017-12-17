@@ -1,5 +1,6 @@
-### 数据格式
-#### ShareDTO字段信息(@detail代表只在请求详情是返回)
+## 分享
+
+### shareDTO数据格式
 ```json
 {
     "id": 1000001,
@@ -15,13 +16,15 @@
     "latitude": 22.22, //@detail,维度
     "lbsDescription": "地址详情",//@detail
     "viewCount": 10, //点击量
+    "number": 10,//数量
+    "takeNumber": 10,//送出数量
     "commentCount": 10,//评论次数
     "newCommentCount": 5,//最新评论次数
     "applyCount": 10,//申请人数
     "newApplyCount": 3,//最新申请人数
     "likeCount": 10,//like人数
 	"picHomepage": "/public/takefree/pic/1.jpg", //首页图片url
-	"categories": [//@detail,分类
+	"categories": [//分类
         {
             "categoryId": 10001 //分类id
         },
@@ -32,7 +35,7 @@
             "categoryId": 10003
         }
     ],
-    "sharePics": [ //@detail,图片
+    "sharePics": [ //图片
         {
             "picUrl": "/public/takefree/pic/1.jpg", //图片URL
             "sequence":"0" //图片顺序号
@@ -45,6 +48,9 @@
             "picUrl": "/public/takefree/pic/3.jpg",
             "sequence":"2"
         }
+    ],
+    "takeOrderDTOS":[ //订单
+        {参考订单orderDTO}
     ]
 }
 ```
@@ -68,6 +74,7 @@
     {
         "title": "title", 
         "description":"描述",
+        "number":1,
         "longitude": 33.3333,
         "latitude": 22.2222,
         "lbsDescription": "地址详情",
@@ -103,10 +110,10 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "result": {
-            "shareId": 1000001
+            "{share}"
         },
         "status": "200000000",
         "info": "操作成功"
@@ -133,6 +140,7 @@
         {
             "title": "title", 
             "description":"描述", 
+            "number":1,
             "longitude": 33.3333, 
             "latitude": 22.2222, 
             "lbsDescription": "地址详情",
@@ -167,7 +175,7 @@
 * 5 返回参数：
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功"
@@ -196,6 +204,7 @@
     {
         "id": 123, //已保存草稿则携带
         "title": "title", //必须
+        "number":1,
         "description":"描述", 
         "longitude": 33.3333, 
         "latitude": 22.2222, 
@@ -232,7 +241,7 @@
 * 5 返回参数
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功"
@@ -261,7 +270,7 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功"
@@ -290,7 +299,7 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
@@ -330,14 +339,13 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
         "result": [{shareDTO}...]
     }
     ```
-
 ***
 ### 7 用户喜欢的分享列表（需要登录）
 * 1 业务描述
@@ -367,7 +375,7 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
@@ -403,13 +411,14 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",
         "result": [{shareDTO}...]
     }
     ```
+***
 ### 9 用户收到的分享列表（需要登录）
 * 1 业务描述
 
@@ -417,7 +426,7 @@
 
 * 2 调用方式
 
-    url地址：https://{domain}/takefree/v1/share/received
+    url地址：https://{domain}/takefree/v1/share/takein
 
     请求方式：*GET*
 
@@ -436,7 +445,39 @@
 * 5 返回消息体
     ```
     {
-        "timestamp": 1504077543058,
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": [{shareDTO}...]
+    }
+    ```
+***
+### 10 用户送出的分享列表（需要登录）
+* 1 业务描述
+
+    查询用户送出的分享列表，按时间倒序
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/share/takeout
+
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    pageSize:可选，分页数量
+    
+    pageNo:可选，分页号
+    
+* 4 请求消息体
+    
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
         "message": "操作成功",
         "status": "20000000",
         "info": "操作成功",

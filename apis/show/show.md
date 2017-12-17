@@ -1,56 +1,242 @@
-#创建（需要登录）
-## 1. 业务描述：
-用户对已经收到的分享显摆一下，上传物品图片、描述、选择一个心情图标
+## 显摆
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/show
-请求方式：*POST*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|orderId|Mumber|分享ID|是|
-|giverId|Mumber|赠与人ID|是|
-|moodId|Mumber|心情图标ID|是|
-|content|String|分享的详细描述，数据库字段类型是text，最大长度65535个字节|否|
-|pics|IoStream|图片，一个分享可以上传多张|是|
-从token里取userId，受赠人
-
-## 4. 返回参数：
-```
+### show数据格式
+```json
 {
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "show_id": 1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
+    "id": 1,
+    "orderId": 1, //订单号
+    "takeTime": "2017-11-13 11:36:02", //订单时间
+    "shareId": 1, //分享id
+    "shareTitle": "title", 
+    "sharePicHomepage": "分享首页图片",
+    "giverId": 1, //分享者id
+    "giverNickName": "分享者昵称", 
+    "giverSmallIcon": "分享者小图标", 
+    "receiverId": 2, //申请人id
+    "receiverNickName": "申请人昵称", 
+    "receiverSmallIcon": "申请人小图标", 
+    "moodId": 10, //心情id
+    "moodName": 1, //心情名称
+    "moodIconUrl": 10, //心情图片
+    "showContentPreview": "显摆缩略", 
+    "content": "显摆内容", 
+    "viewCount": 10, //点击量
+    "likeCount": 10,//like人数
+    "commentCount": 10,//评论次数
+    "showPics": [ //图片
+        {
+            "picUrl": "/public/takefree/pic/1.jpg", //图片URL
+            "sequence":"0" //图片顺序号
+        },
+        {
+            "picUrl": "/public/takefree/pic/2.jpg",
+            "sequence":"1"
+        },
+        {
+            "picUrl": "/public/takefree/pic/3.jpg",
+            "sequence":"2"
+        }
+    ],
+    "gmtCreate":"2017-11-13 11:36:02", //创建时间
+    "gmtCreate":"2017-11-13 11:36:02", //最后修改时间
+    "version":1 //版本
 }
 ```
-***
+### 1 创建显摆（需要登录）
+* 1 业务描述
 
-#查看
-## 1. 业务描述：
-查看显摆信息，但不包括显摆的评论
+* 2 调用方式
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/show/{{id}}
-请求方式：*GET*
+    url地址：https://{domain}/takefree/v1/show
 
-## 3. 输入参数：
-无
+    请求方式：*POST*
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        *show*
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    ```json
+    {
+        "orderId": 1, //订单号
+        "moodId": 10, //心情id
+        "showContentPreview": "显摆缩略", 
+        "content": "显摆内容", 
+        "showPics": [ //图片
+            {
+                "picUrl": "/public/takefree/pic/1.jpg", //图片URL
+                "sequence":"1" //图片顺序号
+            },
+            {
+                "picUrl": "/public/takefree/pic/2.jpg",
+                "sequence":"2"
+            },
+            {
+                "picUrl": "/public/takefree/pic/3.jpg",
+                "sequence":"3"
+            }
+        ]
     }
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+    ```
+* 5 返回消息体
+    ```json
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+        "result": {
+            "{show}"
+        }
+    }
+    ```
+***
+### 2 更新显摆（需要登录）
+* 1 业务描述
+    
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/show/{id}
+    
+    请求方式：*PUT*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    ```json
+    {
+        "orderId": 1, //订单号
+        "moodId": 10, //心情id
+        "showContentPreview": "显摆缩略", 
+        "content": "显摆内容", 
+        "showPics": [ //图片
+            {
+                "picUrl": "/public/takefree/pic/1.jpg", //图片URL
+                "sequence":"1" //图片顺序号
+            },
+            {
+                "picUrl": "/public/takefree/pic/2.jpg",
+                "sequence":"2"
+            },
+            {
+                "picUrl": "/public/takefree/pic/3.jpg",
+                "sequence":"3"
+            }
+        ]
+    }
+    ```
+* 5 返回参数：
+    ```json
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功"
+    }
+    ```
+***
+### 3 删除显摆（需要登录）
+* 1 业务描述
+    
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/show/{id}
+    
+    请求方式：*DELETE*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+
+    无
+    
+* 5 返回参数：
+    ```json
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功"
+    }
+    ```
+***
+### 4 按id查询显摆
+* 1 业务描述
+    
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/show/{id}
+    
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+
+    无
+    
+* 5 返回参数：
+    ```json
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": {
+              "{show}"
+         }
+    }
+    ```
+***
+### 5 查询显摆列表
+* 1 业务描述
+
+    显摆列表,时间倒序
+    
+* 2 调用方式
+    
+    url地址：https://{domain}/takefree/v1/show
+    
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    maxId:可选，最大id(不包含)，用于分页
+    
+    pageSize:可选，分页数量
+    
+    pageNo:可选，分页号
+    
+    shareId:可选，分享id
+    
+    orderId:可选，订单id
+    
+    receiverId:可选，获得人id
+    
+    giverId:可选，分享人id
+    
+    注意:maxId与pageNo二选一
+
+* 4 请求消息体
+
+    无
+    
+* 5 返回参数：
+    ```json
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": {
+              ["{show}"...]
+         }
+    }
+    ```
 ***

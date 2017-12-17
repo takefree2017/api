@@ -9,18 +9,22 @@
 	* [3.用户地址](apis/userDTO/userAddress.md)
   * 类目
   	* [1.类目](apis/category/category.md)
+  	* [2.类目like](apis/category/categoryLike.md)
   * 分享
 	* [1.分享](apis/share/share.md)
 	* [2.分享like](apis/share/shareLike.md)
   * 交易
-    * [1.申请](apis/trade/application.md)
+    * [1.申请](apis/trade/apply.md)
 	* [2.订单](apis/trade/order.md)
 	* [3.物流](apis/trade/logistics.md)
+	* [4.评价](apis/trade/rate.md)
   * 评论
     * [1.分享评论](apis/comment/share.md)
 	* [2.显摆评论](apis/comment/show.md)
   * 显摆
-    * [1.基本操作](apis/show/show.md)
+    * [1.显摆](apis/show/show.md)
+    * [2.显摆like](apis/show/showLike.md)
   * 其他
     * [1.首页](apis/other/index.md)
-* [接口mock](apis/mock.md)
+    * [2.上传文件名](apis/other/filename.md)
+    * [3.配置](apis/other/config.md)

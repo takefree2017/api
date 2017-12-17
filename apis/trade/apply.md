@@ -1,106 +1,189 @@
-#发送想要申请（需要登录）
-## 1. 业务描述：
-用户发送想要申请
+## 申请分享
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/application
-请求方式：*POST*
-
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|showId|Mumber|分享ID|是|
-|applyType|Mumber|交易类型, 10邮寄到付; 20见面交易; 30支持两种|是|
-|addressId|Mumber|申请者邮寄地址ID|否|
-从token里取userId
-
-## 4. 返回参数：
-```
+### apply数据格式
+```json
 {
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "applicationId": 1000001
-    },
-    "status": "20000000",
-    "info": "操作成功"
+    "id": 14, //id
+    "shareId": 1, //分享id
+    "sharePicHomepage": "", //分享首页图片
+    "ownerId": 1, //分享者id
+    "ownerNickName": "分享者昵称", 
+    "ownerSmallIcon": "分享者小图标", 
+    "applicantId": 2, //申请人id
+    "applicantNickName": "申请人昵称", 
+    "ownerSmallIcon": "申请人小图标", 
+    "applyTime": "2017-11-13 11:36:02", //申请时间
+    "applyType": 10, //10邮寄到付; 20见面交易; 30支持两种
+    "addressId": 1, //收货地址
+    "status": 10, //10,初始状态;20,成功;30,申请失败
+    "gmtCreate":"2017-11-13 11:36:02", //创建时间
+    "gmtCreate":"2017-11-13 11:36:02", //最后修改时间
+    "version":1 //版本
 }
 ```
+
+### 1 申请（需要登录）
+* 1 业务描述
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/apply
+
+    请求方式：*POST*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    ```json
+    {
+        "shareId": 1,
+        "applyType": 10,
+        "addressId": 1
+    }
+    ```
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+            "{apply}"
+        }
+    }
+    ```
 ***
+### 2 删除申请（需要登录）
+* 1 业务描述
 
-#用户的申请记录（需要登录）
-## 1. 业务描述：
-查看用户的申请记录，在返回结果里标注分享当前状态，如果分享已经下架标注是否送给了当前用户，用户只能查看自己的申请记录，支持分页
+* 2 调用方式
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/application/userDTO
-请求方式：*GET*
+    url地址：https://{domain}/takefree/v1/apply/{id}
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|pageNo|Mumber|当前页码|是|
-|pageSize|Mumber|每页尺寸|是|
-从token里取userId
+    请求方式：*DELETE*
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "userId": 1000001,
-        "applications": [
-            {
-                *application*,
-                *{share}*
-            },
-            {
-                *application*,
-                *{share}*
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
 ***
+### 3 修改申请（需要登录）
+* 1 业务描述
 
-#查看一个分享的申请记录（需要登录）
-## 1. 业务描述：
-查看某一个分享被申请的记录，分享主人才能查看，暂不支持分页
+* 2 调用方式
 
-## 2. 调用方式：
-url地址：https://{domain}/takefree/v1/application/share
-请求方式：*GET*
+    url地址：https://{domain}/takefree/v1/apply/{id}
 
-## 3. 输入参数：
-|字段名|属性|描述|是否必填|
-|---------|:------:|------:|------------:|
-|pageNo|Mumber|当前页码|是|
-|pageSize|Mumber|每页尺寸|是|
-|shareId|Mumber|分享ID|是|
-从token里取userId
+    请求方式：*PUT*
 
-## 4. 返回参数：
-```
-{
-    "timestamp": 1504077543058,
-    "message": "操作成功",
-    "result": {
-        "shareId": 1000001,
-        "applications": [
-            {
-                *application*
-            },
-            {
-                *application*
-            }
-        ]
-    },
-    "status": "20000000",
-    "info": "操作成功"
-}
-```
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    
+    {
+        "applyType": 10,
+        "status": 20
+            
+    }
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功"
+    }
+    ```
+***
+### 4 根据id查询申请（需要登录）
+* 1 业务描述
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/apply/{id}
+
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    无
+
+* 4 请求消息体
+    
+    {
+        "applyType": 10,
+        "status": 20
+            
+    }
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "200000000",
+        "info": "操作成功",
+        "result": {
+             "{apply}"
+        }
+    }
+    ```
+***
+### 5 查询申请列表（需要登录）
+* 1 业务描述
+
+    查询用户收到的分享列表，可根据发布人筛选
+
+* 2 调用方式
+
+    url地址：https://{domain}/takefree/v1/apply
+
+    请求方式：*GET*
+
+* 3 输入参数
+    
+    applicantId:可选,申请人id
+    
+    shareId:可选,分享id
+    
+    status:可选,状态
+    
+    pageSize:可选，分页数量
+    
+    pageNo:可选，分页号
+    
+* 4 请求消息体
+    
+    无
+
+* 5 返回消息体
+    ```
+    {
+        "timestamp": "2017-11-13 11:36:02",
+        "message": "操作成功",
+        "status": "20000000",
+        "info": "操作成功",
+        "result": [{apply}...]
+    }
+    ```
 ***
