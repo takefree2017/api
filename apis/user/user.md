@@ -128,7 +128,7 @@
 
 * 2 调用方式
     
-    url地址：https://{domain}/takefree/v1/login/password/sms
+    url地址：https://{domain}/takefree/v1/login/sms
     
     请求方式：*POST*
 
@@ -229,7 +229,7 @@
 
 * 2 调用方式：
 
-    url地址：https://{domain}/takefree/v1/user/detail
+    url地址：https://{domain}/takefree/v1/user
     
     请求方式：*GET*
     

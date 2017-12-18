@@ -6,7 +6,7 @@
   * 用户
 	* [1.用户](apis/user/user.md)
 	* [2.用户like](apis/user/userLike.md)
-	* [3.用户地址](apis/userDTO/userAddress.md)
+	* [3.用户地址](apis/user/userAddress.md)
   * 类目
   	* [1.类目](apis/category/category.md)
   	* [2.类目like](apis/category/categoryLike.md)

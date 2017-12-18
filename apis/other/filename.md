@@ -5,7 +5,7 @@
 
 * 2 调用方式
 
-    url地址：https://{domain}/takefree/v1/config
+    url地址：https://{domain}/takefree/v1/filename
     
     请求方式：*GET*
 
