@@ -4,7 +4,7 @@
 
 ## 2. 调用方式：
 url地址：https://{domain}/takefree/v1/region?version={version}
-请求方式：*POST*
+请求方式：*GET*
 
 ## 3. 输入参数：
 version为可选参数，表示请求端已有数据的版本。
