@@ -8,7 +8,7 @@
     "realName": "高翔", //姓名
     "mobile": "手机号", 
     "email": "邮箱", 
-    "password": "123456",//密码,最短6位，最长12位
+    "password": "123456",//密码,最短6位，最长12位,数据库md5两次保存
     "imPassword": "c56d0e9a7ccec67b4ea131655038d604",//im密码,password md5 3次
     "endorserId": 0, //推荐人id
     "status":10,//状态."未激活",10；"已经激活",20);
