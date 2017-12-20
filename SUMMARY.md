@@ -28,3 +28,4 @@
     * [1.首页](apis/other/index.md)
     * [2.上传文件名](apis/other/filename.md)
     * [3.配置](apis/other/config.md)
+    * [4.地区数据](apis/region/region.md)
