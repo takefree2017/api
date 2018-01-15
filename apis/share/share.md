@@ -11,7 +11,10 @@
     "shareDescPreview": "描述缩略",
     "description":"描述",
     "publishTime": "2017-11-14 11:36:02",//发布时间
-    "status": "10",//状态。10，草稿；20，发布中；30，已送出；40，取消
+    "status": 10,//状态。10，草稿；20，发布中；30，已送出；40，取消
+    "shareModeId":1, //shareMode
+    "transferable":1, //是否交接。0,否;1,是
+    "participatory":1, //是否有人参与。0,否;1,是
     "longitude": 33.33, //@detail,经度
     "latitude": 22.22, //@detail,维度
     "lbsDescription": "地址详情",//@detail
@@ -77,6 +80,9 @@
         "number":1,
         "longitude": 33.3333,
         "latitude": 22.2222,
+        "shareModeId":1,
+        "transferable":1,
+        "participatory":1,
         "lbsDescription": "地址详情",
     	"picHomepage": "/public/takefree/pic/1.jpg", 
     	"categories": [
@@ -144,6 +150,9 @@
             "longitude": 33.3333, 
             "latitude": 22.2222, 
             "lbsDescription": "地址详情",
+            "shareModeId":1,
+            "transferable":1,
+            "participatory":1,            
         	"picHomepage": "/public/takefree/pic/1.jpg", 
         	"categories": [
                 {
@@ -209,6 +218,9 @@
         "longitude": 33.3333, 
         "latitude": 22.2222, 
         "lbsDescription": "地址详情",
+        "shareModeId":1,
+        "transferable":1,
+        "participatory":1,
     	"picHomepage": "/public/takefree/pic/1.jpg", //必须,首页图片url
     	"categories": [
             {
@@ -329,6 +341,8 @@
     pageSize:可选，分页数量
     
     pageNo:可选，分页号
+    
+    searchWord:可选，在分享title中按关键字搜索
     
     注意:maxId与pageNo二选一
     
