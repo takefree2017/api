@@ -21,18 +21,27 @@ version为可选参数,表示请求端的已有数据版本。
       "categoryName": "电脑数码",
       "layer": 10,
       "parentCategoryId": 0,
+      "virtualFlag":	1,
+      "express":	1,
+      "participant":	1,
       "subCategoryList": [
         {
           "id": 101000,
           "categoryName": "手机通讯",
           "layer": 20,
-          "parentCategoryId": 0
+          "parentCategoryId": 0,
+          "virtualFlag":	1,
+          "express":	0,
+          "participant":	0
         },
         {
           "id": 101100,
           "categoryName": "摄影摄像",
           "layer": 20,
-          "parentCategoryId": 0
+          "parentCategoryId": 0,
+          "virtualFlag":	0,
+          "express":	0,
+          "participant":	0
         },
         ...
     }
