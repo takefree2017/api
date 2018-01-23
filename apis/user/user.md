@@ -19,7 +19,8 @@
     "bigIcon": "/public/takefree/222223.jpg", //大图标
     "gmtCreate": "2017-11-13 11:36:02", //创建时间
     "lastloginTime": "2017-11-20 11:41:41", //最后登录时间
-    "isFollowee":false //当前用户是否被我like，用于当前用户查看follower
+    "isFollowee":true,//当前用户是否被我like，用于用户查看关注我的人
+    "isFollower":true //当前用户是否like我，用于用户查看我关注的人
 }
 ```
 ### 1 新建用户(推荐)（需要登录）
