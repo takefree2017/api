@@ -14,6 +14,7 @@
     "status": 10,//状态。10，草稿；20，发布中；30，已送出；40，取消
     "shareModeId":1, //shareMode
     "transferable":1, //是否交接。0,否;1,是
+    "transferType":1, //10,物流;20,见面交易;30,支持两种.transferable=1时有效
     "participatory":1, //是否有人参与。0,否;1,是
     "longitude": 33.33, //@detail,经度
     "latitude": 22.22, //@detail,维度
