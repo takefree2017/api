@@ -106,6 +106,8 @@
 
 * 2 调用方式
 
+
+
     url地址：https://{domain}/takefree/v1/rate
 
     请求方式：*GET*
@@ -116,7 +118,7 @@
 
 * 4 请求消息体
     
-    orderId:可选,分享id
+    orderId:可选
     
 * 5 返回消息体
     ```
