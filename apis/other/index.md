@@ -30,7 +30,7 @@
         "info": "操作成功",
         "result": [
             {
-                "sequence":10,
+                "sequence":10,//序号
                 "type":1,//1:分享；2:显摆
                 "share":{$shareDTO}, //分享，type=1时有效
                 "show":{$showDTO} //显摆，type=2时有效
