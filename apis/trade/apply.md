@@ -7,6 +7,7 @@
     "shareId": 1, //分享id
     "sharePicHomepage": "", //分享首页图片
     "ownerId": 1, //分享者id
+    "shareTitle":"shareTitle",
     "ownerNickName": "分享者昵称", 
     "ownerSmallIcon": "分享者小图标", 
     "applicantId": 2, //申请人id

@@ -1,6 +1,6 @@
 ### 权限
 * 接口权限通过token验证，tokenId在登录时返回，同时设置cookie。
-* 对于权限验证的接口通过cookie或者http参数方式携带takefree_token。token过期或无效返回401000000错误
+* 对于权限验证的接口通过cookie或者http参数方式携带tokenId(takefree_token)。token过期或无效返回401000000错误
 * 为了控制数据权限,userId字段通过token获取
 
 > 接口访问权限在每个接口单独标注，未标注代表不需要登录

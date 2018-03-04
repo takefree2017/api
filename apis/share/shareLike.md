@@ -5,6 +5,7 @@
 {
     "id": 14, //id
     "shareId": 1, //分享id
+    "shareTitle":"shareTitle",
     "sharePicHomepage": "/public/takefree/pic/1.jpg", 
     "shareStatus": "10",//状态。10，草稿；20，发布中；30，已送出；40，取消
     "ownerId": 2, //发布人id
@@ -104,7 +105,7 @@
         "message": "操作成功",
         "status": "200000000",
         "info": "操作成功",
-         "result": [{shareLikeDTO}...]
+        "result": [{shareLikeDTO}...]
     }
     ```
 ***
