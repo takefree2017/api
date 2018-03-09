@@ -39,7 +39,8 @@
     ],
     "gmtCreate":"2017-11-13 11:36:02", //创建时间
     "gmtCreate":"2017-11-13 11:36:02", //最后修改时间
-    "version":1 //版本
+    "version":1,//版本
+    "isCurrentUserLike": true //当前用户是否like
 }
 ```
 ### 1 创建显摆（需要登录）

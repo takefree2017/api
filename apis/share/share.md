@@ -28,6 +28,8 @@
     "newApplyCount": 3,//最新申请人数
     "likeCount": 10,//like人数
 	"picHomepage": "/public/takefree/pic/1.jpg", //首页图片url
+	"isCurrentUserLike":true, //当前用户是否like
+	"isCurrentUserApply":false, //当前用户是否apply
 	"categories": [//分类
         {
             "categoryId": 10001 //分类id
